@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="eu.irve.emf.test.testconf.presentation.TestconfModelWizardID"
+            name="%_UI_TestconfModelWizard_label"
+            class="eu.irve.emf.test.testconf.presentation.TestconfModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TestconfModelFile.gif">
+         <description>%_UI_TestconfModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="eu.irve.emf.test.testconf.presentation.TestconfEditorID"
+            name="%_UI_TestconfEditor_label"
+            icon="icons/full/obj16/TestconfModelFile.gif"
+            extensions="testconf"
+            class="eu.irve.emf.test.testconf.presentation.TestconfEditor"
+            contributorClass="eu.irve.emf.test.testconf.presentation.TestconfActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
